@@ -1,34 +1,99 @@
 body {
   font-family: 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
-  max-width: 600px;
+  box-sizing: border-box;
+  position: relative;
+  padding: 30px 80px;
   margin: 0 auto;
-  padding-top: 72px;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1.125em;
-  color: #333;
-  line-height: 1.5em;
 }
 
-h1, h2, h3 {
-  color: #000;
-}
-h1 {
-  font-size: 2.5em
+* {
+  box-sizing: border-box;
 }
 
-h2 {
-  font-size: 2em
+.title {
+  color: lightgray;
+  font-weight: bold;
+  font-size: 16px;
+  height: 40px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
-h3 {
-  font-size: 1.5em
+.footer {
+  margin-top: 40px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-a {
-  text-decoration: none;
-  color: #09f;
+.color-palette {
+  height: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-a:hover {
-  text-decoration: underline;
+.color-circle {
+  margin: 10px;
+  background-color: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #d2d2d2;
+  position: relative;
+}
+
+.color-display {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.color-picker {
+  position: absolute;
+  z-index: 5;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+}
+
+.drop-area {
+  border-radius: 20px;
+  height: calc(100vh - 320px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:  8px 8px 32px 12px rgb(236, 236, 236);
+  padding: 20px 30px;
+  word-break: break-all;
+}
+
+.large-text {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.text-input {
+  height: 36px;
+  width: 260px;
+  border-radius: 18px;
+  outline: none;
+  border: 1px solid #d2d2d2;
+  padding: 0 10px;
+  color: dimgrey;
+  transition: border-color 150ms ease-in;
+  text-align: center;
+}
+
+.text-input:focus {
+  border-color: #9f9fab;
 }
